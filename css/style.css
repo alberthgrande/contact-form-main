@@ -1,0 +1,99 @@
+@import url("./reset.css");
+@import url("./root.css");
+@import url("./mobile.css");
+
+@font-face {
+  font-family: "Karla", sans-serif;
+  src: url("../assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Karla", sans-serif;
+  background: var(--primary-Green-200);
+}
+
+label {
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+.label-query,
+textarea {
+  margin: 0.5rem 0;
+}
+
+input,
+textarea {
+  cursor: pointer;
+}
+
+.container {
+  margin: 1rem;
+  padding: 2rem;
+  background: var(--neutral-white);
+
+  width: 100%;
+  max-width: 736px;
+}
+
+.contact-form_group {
+  margin: 1rem 0;
+}
+
+.contact-name {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-name label > input[type="text"] {
+  width: 100%;
+  max-width: 328px;
+  display: inline-block;
+}
+
+.contact-name input[type="text"],
+.contact-query_type label,
+.contact-email input[type="email"],
+.contact-message textarea {
+  padding: 0.7rem 1rem;
+}
+
+.contact-email input[type="email"],
+.contact-message textarea {
+  width: 100%;
+  display: inline-block;
+}
+
+.contact-query_type {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-query_type label {
+  width: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* validation */
+.error-firstName,
+.error-lastName,
+.error-email,
+.error-query,
+.error-message {
+  display: none;
+}

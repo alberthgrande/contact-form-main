@@ -12,52 +12,101 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Contact form</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <!-- script js -->
+    <script src="./js/script.js" defer></script>
+    <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    Contact Us <br />
+    <main class="container">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <div class="contact-name contact-form_group">
+          <div>
+            <label for="contactFirstName">
+              <span class="label-name">First Name</span>
+              <input
+                type="text"
+                name="contactFirstName"
+                id="contactFirstName"
+              />
+            </label>
+            <span class="error-firstName"> This field is required</span>
+          </div>
+          <div>
+            <label for="contactLastName">
+              <span class="label-name">Last Name</span>
+              <input type="text" name="contactLastName" id="contactLastName" />
+            </label>
+            <span class="error-lastName"> This field is required</span>
+          </div>
+        </div>
 
-    First Name<br />
-    This field is required<br />
+        <div class="contact-email contact-form_group">
+          <label for="contactEmail">
+            <span class="label-name">Email Address</span>
+          </label>
+          <input type="email" name="contactEmail" id="contactEmail" />
+          <!-- <span>Please enter a valid email address</span> -->
+          <span class="error-email">This field is required</span>
+        </div>
 
-    Last Name<br />
-    This field is required<br />
+        <div class="contact-query contact-form_group">
+          <p class="label-query">Query Type</p>
+          <div class="contact-query_type">
+            <label for="contactGeneralEnquiry">
+              <input
+                type="radio"
+                name="contactQueryType"
+                id="contactGeneralEnquiry"
+              />
+              <span>General Enquiry</span>
+            </label>
 
-    Email Address<br />
-    Please enter a valid email address<br />
-    This field is required<br />
+            <label for="contactSupportRequest">
+              <input
+                type="radio"
+                name="contactQueryType"
+                id="contactSupportRequest"
+              />
+              <span>Support Request</span>
+            </label>
+          </div>
+          <span class="error-query">Please select a query type</span>
+        </div>
 
-    Query Type<br />
-    General Enquiry<br />
-    Support Request<br />
-    Please select a query type<br />
+        <div class="contact-message contact-form_group">
+          <label for="contactMessage">
+            <span class="label-name">Message</span>
+          </label>
+          <textarea name="contactMessage" id="contactMessage"></textarea>
+          <span class="error-message"> This field is required</span>
+        </div>
 
-    Message<br />
-    This field is required<br />
+        <div class="contact-consent contact-form_group">
+          <label for="contactConsent">
+            <input type="checkbox" name="contactConsent" id="contactConsent" />
+            <span>I consent to being contacted by the team</span>
+          </label>
 
-    I consent to being contacted by the team<br />
-    To submit this form, please consent to being contacted<br />
+          <!-- <span>To submit this form, please consent to being contacted</span> -->
+        </div>
 
-    Submit<br />
+        <div class="contact-button">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
 
-    Message Sent!<br />
-    Thanks for completing the form. We'll be in touch soon!
+    <!-- Message Sent!<br />
+    Thanks for completing the form. We'll be in touch soon! -->
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
