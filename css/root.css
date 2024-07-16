@@ -8,4 +8,9 @@
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-grey-500: hsl(186, 15%, 59%);
   --neutral-grey-900: hsl(187, 24%, 22%);
+
+  /* font weights */
+  --font-weights-400: 400;
+  --font-weights-600: 600;
+  --font-weights-700: 700;
 }

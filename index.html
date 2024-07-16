@@ -20,13 +20,15 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <main class="container">
-      <h1>Contact Us</h1>
+    <div class="container">
+      <h1 class="contact-header">Contact Us</h1>
       <form id="contactForm">
         <div class="contact-name contact-form_group">
           <div>
             <label for="contactFirstName">
-              <span class="label-name">First Name</span>
+              <span class="label-name"
+                >First Name <span class="required-asterisk">*</span></span
+              >
               <input
                 type="text"
                 name="contactFirstName"
@@ -37,7 +39,9 @@
           </div>
           <div>
             <label for="contactLastName">
-              <span class="label-name">Last Name</span>
+              <span class="label-name"
+                >Last Name <span class="required-asterisk">*</span></span
+              >
               <input type="text" name="contactLastName" id="contactLastName" />
             </label>
             <span class="error-lastName"> This field is required</span>
@@ -46,7 +50,9 @@
 
         <div class="contact-email contact-form_group">
           <label for="contactEmail">
-            <span class="label-name">Email Address</span>
+            <span class="label-name"
+              >Email Address <span class="required-asterisk">*</span></span
+            >
           </label>
           <input type="email" name="contactEmail" id="contactEmail" />
           <!-- <span>Please enter a valid email address</span> -->
@@ -54,7 +60,9 @@
         </div>
 
         <div class="contact-query contact-form_group">
-          <p class="label-query">Query Type</p>
+          <p class="label-query">
+            Query Type <span class="required-asterisk">*</span>
+          </p>
           <div class="contact-query_type">
             <label for="contactGeneralEnquiry">
               <input
@@ -79,7 +87,9 @@
 
         <div class="contact-message contact-form_group">
           <label for="contactMessage">
-            <span class="label-name">Message</span>
+            <span class="label-name"
+              >Message <span class="required-asterisk">*</span></span
+            >
           </label>
           <textarea name="contactMessage" id="contactMessage"></textarea>
           <span class="error-message"> This field is required</span>
@@ -91,14 +101,16 @@
             <span>I consent to being contacted by the team</span>
           </label>
 
-          <!-- <span>To submit this form, please consent to being contacted</span> -->
+          <p class="error-consent">
+            To submit this form, please consent to being contacted
+          </p>
         </div>
 
         <div class="contact-button">
           <button type="submit">Submit</button>
         </div>
       </form>
-    </main>
+    </div>
 
     <!-- Message Sent!<br />
     Thanks for completing the form. We'll be in touch soon! -->
