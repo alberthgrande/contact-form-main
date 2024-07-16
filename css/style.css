@@ -13,9 +13,6 @@ body {
   height: 100vh;
   font-family: "Karla", sans-serif;
   background: var(--primary-Green-200);
-}
-
-h1 {
   color: var(--neutral-grey-900);
 }
 
@@ -35,17 +32,18 @@ input[type="email"],
 textarea {
   border-radius: 8px;
   outline: none;
-  border: 2px solid var(--neutral-grey-500);
+  border: 1px solid var(--neutral-grey-500);
+  margin-top: 1rem;
 }
 
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover {
-  border: 2px solid var(--primary-Green-600);
+  border: 1px solid var(--primary-Green-600);
 }
 
 .contact-query_type label:hover {
-  border: 2px solid var(--primary-Green-600);
+  border: 1px solid var(--primary-Green-600);
 }
 
 .container {
@@ -85,6 +83,7 @@ textarea:hover {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-query_type label {
@@ -92,7 +91,7 @@ textarea:hover {
   cursor: pointer;
   outline: none;
   border-radius: 8px;
-  border: 2px solid var(--neutral-grey-500);
+  border: 1px solid var(--neutral-grey-500);
 }
 
 .required-asterisk {
