@@ -40,7 +40,7 @@ contactForm.addEventListener("submit", (e) => {
   if (contactFirstName === "") {
     document.querySelector(".error-firstName").style.display = "block";
     document.querySelector(".error-firstName").style.color = "hsl(0, 66%, 54%)";
-    contactFirstNameInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    contactFirstNameInput.style.border = "2px solid hsl(0, 66%, 54%)";
     formIsValid = false;
   } else {
     document.querySelector(".error-firstName").style.display = "none";
@@ -48,7 +48,7 @@ contactForm.addEventListener("submit", (e) => {
   if (contactLastName === "") {
     document.querySelector(".error-lastName").style.display = "block";
     document.querySelector(".error-lastName").style.color = "hsl(0, 66%, 54%)";
-    contactLastNameInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    contactLastNameInput.style.border = "2px solid hsl(0, 66%, 54%)";
     formIsValid = false;
   } else {
     document.querySelector(".error-lastName").style.display = "none";
@@ -56,7 +56,7 @@ contactForm.addEventListener("submit", (e) => {
   if (contactEmail === "") {
     document.querySelector(".error-email").style.display = "block";
     document.querySelector(".error-email").style.color = "hsl(0, 66%, 54%)";
-    contactEmailInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    contactEmailInput.style.border = "2px solid hsl(0, 66%, 54%)";
     formIsValid = false;
   } else {
     document.querySelector(".error-email").style.display = "none";
@@ -73,7 +73,7 @@ contactForm.addEventListener("submit", (e) => {
   if (contactMessage === "") {
     document.querySelector(".error-message").style.display = "block";
     document.querySelector(".error-message").style.color = "hsl(0, 66%, 54%)";
-    contactMessageInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    contactMessageInput.style.border = "2px solid hsl(0, 66%, 54%)";
     formIsValid = false;
   } else {
     document.querySelector(".error-message").style.display = "none";
@@ -91,6 +91,9 @@ contactForm.addEventListener("submit", (e) => {
     setTimeout(() => {
       myModal.style.display = "none";
       contactForm.reset();
+      radioButtons.forEach((btnRadio) => {
+        btnRadio.parentElement.classList.remove("selected");
+      });
     }, 2000);
   }
 });
@@ -100,7 +103,7 @@ contactFirstNameInput.addEventListener("input", (e) => {
   e.preventDefault();
   if (contactFirstNameInput.value.trim() !== "") {
     document.querySelector(".error-firstName").style.display = "none";
-    contactFirstNameInput.style.border = "1px solid hsl(186, 15%, 59%)";
+    contactFirstNameInput.style.border = "2px solid hsl(186, 15%, 59%)";
   }
 });
 
@@ -108,7 +111,7 @@ contactLastNameInput.addEventListener("input", (e) => {
   e.preventDefault();
   if (contactLastNameInput.value.trim() !== "") {
     document.querySelector(".error-lastName").style.display = "none";
-    contactLastNameInput.style.border = "1px solid hsl(186, 15%, 59%)";
+    contactLastNameInput.style.border = "2px solid hsl(186, 15%, 59%)";
   }
 });
 
@@ -116,7 +119,7 @@ contactEmailInput.addEventListener("input", (e) => {
   e.preventDefault();
   if (contactEmailInput.value.trim() !== "") {
     document.querySelector(".error-email").style.display = "none";
-    contactEmailInput.style.border = "1px solid hsl(186, 15%, 59%)";
+    contactEmailInput.style.border = "2px solid hsl(186, 15%, 59%)";
   }
 });
 
@@ -136,7 +139,7 @@ contactMessageInput.addEventListener("input", (e) => {
   e.preventDefault();
   if (contactMessageInput.value.trim() !== "") {
     document.querySelector(".error-message").style.display = "none";
-    contactMessageInput.style.border = "1px solid hsl(186, 15%, 59%)";
+    contactMessageInput.style.border = "2px solid hsl(186, 15%, 59%)";
   }
 });
 
