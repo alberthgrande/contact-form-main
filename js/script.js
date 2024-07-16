@@ -22,6 +22,8 @@ const contactMessageInput = document.getElementById("contactMessage");
 
 const contactConsentCheck = document.getElementById("contactConsent");
 
+const myModal = document.getElementById("myModal");
+
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -33,11 +35,13 @@ contactForm.addEventListener("submit", (e) => {
   const contactMessage = contactMessageInput.value.trim();
 
   const contactConsent = contactConsentCheck.checked;
+  let formIsValid = true;
 
   if (contactFirstName === "") {
     document.querySelector(".error-firstName").style.display = "block";
     document.querySelector(".error-firstName").style.color = "hsl(0, 66%, 54%)";
     contactFirstNameInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-firstName").style.display = "none";
   }
@@ -45,6 +49,7 @@ contactForm.addEventListener("submit", (e) => {
     document.querySelector(".error-lastName").style.display = "block";
     document.querySelector(".error-lastName").style.color = "hsl(0, 66%, 54%)";
     contactLastNameInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-lastName").style.display = "none";
   }
@@ -52,6 +57,7 @@ contactForm.addEventListener("submit", (e) => {
     document.querySelector(".error-email").style.display = "block";
     document.querySelector(".error-email").style.color = "hsl(0, 66%, 54%)";
     contactEmailInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-email").style.display = "none";
   }
@@ -59,6 +65,7 @@ contactForm.addEventListener("submit", (e) => {
   if (!querySelected) {
     document.querySelector(".error-query").style.display = "block";
     document.querySelector(".error-query").style.color = "hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-query").style.display = "none";
   }
@@ -67,14 +74,24 @@ contactForm.addEventListener("submit", (e) => {
     document.querySelector(".error-message").style.display = "block";
     document.querySelector(".error-message").style.color = "hsl(0, 66%, 54%)";
     contactMessageInput.style.border = "1.8px solid hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-message").style.display = "none";
   }
   if (!contactConsent) {
     document.querySelector(".error-consent").style.display = "block";
     document.querySelector(".error-consent").style.color = "hsl(0, 66%, 54%)";
+    formIsValid = false;
   } else {
     document.querySelector(".error-consent").style.display = "none";
+  }
+
+  if (formIsValid) {
+    myModal.style.display = "block";
+    setTimeout(() => {
+      myModal.style.display = "none";
+      contactForm.reset();
+    }, 2000);
   }
 });
 

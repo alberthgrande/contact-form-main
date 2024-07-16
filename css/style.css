@@ -153,8 +153,50 @@ input[name="contactQueryType"]:checked + span,
   margin-bottom: 10px; /* Optional: Add some space between each label */
 }
 
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--neutral-grey-900);
+  color: var(--neutral-white);
+  padding: 2rem;
+
+  border-radius: 15px;
+}
+
+.modal p {
+  margin-top: 1rem;
+}
+
+.message-success {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.message-success span {
+  letter-spacing: 1px;
+  font-weight: var(--font-weights-700);
+}
+
 /* media query */
 @media only screen and (max-width: 600px) {
+  .message-success {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .modal p {
+    margin-top: 1rem;
+  }
+
   .container {
     margin: 100rem 1.25rem;
   }
